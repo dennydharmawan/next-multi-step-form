@@ -22,13 +22,13 @@ export default function MyApp(props) {
     <>
       {/* <GoogleFonts href="https://fonts.googleapis.com/css2?family=Inter:wght@300,400;500;700&display=swap" /> */}
       <DefaultSeo
-        title="Spotify Utils"
-        titleTemplate={'%s | Spotify Utils'}
+        title="Denny Incorporation"
+        titleTemplate={'%s | Denny Incorporation'}
         openGraph={{
           type: 'website',
           locale: 'en_IE',
-          url: 'https://spotify-utils.vercel.app/',
-          site_name: 'Spotify Utils',
+          url: 'https://denny-incorporation.vercel.app/',
+          site_name: 'Denny Incorporation',
         }}
       />
       <ThemeProvider theme={theme}>
@@ -39,8 +39,3 @@ export default function MyApp(props) {
     </>
   );
 }
-
-MyApp.propTypes = {
-  Component: PropTypes.func.isRequired,
-  pageProps: PropTypes.object.isRequired,
-};
