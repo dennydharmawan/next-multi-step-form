@@ -12,7 +12,7 @@ export default class MyDocument extends Document {
           <meta name="theme-color" content={theme.palette.primary.main} />
           <link
             rel="stylesheet"
-            href="https://fonts.googleapis.com/css2?family=Inter:wght@300,400;500;700&display=swap"
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap"
           />
           <link rel="shortcut icon" type="image/png" href="/favicon.png"></link>
         </Head>

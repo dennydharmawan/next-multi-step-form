@@ -7,9 +7,10 @@ import Paper from '@material-ui/core/Paper';
 import Stepper from '@material-ui/core/Stepper';
 import Step from '@material-ui/core/Step';
 import StepLabel from '@material-ui/core/StepLabel';
-import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import { useForm } from 'react-hook-form';
+import Button from '@material-ui/core/Button';
+import { NextSeo } from 'next-seo';
 
 import AddressForm from '../components/AddressForm';
 import PaymentForm from '../components/PaymentForm';
@@ -86,6 +87,14 @@ export default function Checkout() {
   return (
     <React.Fragment>
       <CssBaseline />
+      {/* <NextSeo
+        title="Checkout"
+        canonical={`${process.env.CANONICAL_URL}/Checkout`}
+        openGraph={{
+          url: `${process.env.CANONICAL_URL}/Checkout`,
+          title: 'Checkout | Denny Incorporation',
+        }}
+      /> */}
       <AppBar position="absolute" color="default" className={classes.appBar}>
         <Toolbar>
           <Typography variant="h6" color="inherit" noWrap>
