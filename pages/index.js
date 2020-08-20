@@ -95,7 +95,7 @@ export default function Checkout() {
           title: 'Checkout | Denny Incorporation',
         }}
       />
-      <AppBar position="absolute" color="default" className={classes.appBar}>
+      <AppBar position="absolute" color="secondary" className={classes.appBar}>
         <Toolbar>
           <Typography variant="h6" color="inherit" noWrap>
             Denny Incorporation
