@@ -38,7 +38,7 @@ export default function AddressForm() {
   });
   // a hack to shift store state into uncontrolled checkbox
   const [checked, setChecked] = useState(addressForm?.saveAddress || false);
-  console.log(process.env.NODE_ENV);
+
   return (
     <React.Fragment>
       <form

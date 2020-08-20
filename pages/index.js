@@ -87,14 +87,14 @@ export default function Checkout() {
   return (
     <React.Fragment>
       <CssBaseline />
-      {/* <NextSeo
+      <NextSeo
         title="Checkout"
         canonical={`${process.env.CANONICAL_URL}/Checkout`}
         openGraph={{
           url: `${process.env.CANONICAL_URL}/Checkout`,
           title: 'Checkout | Denny Incorporation',
         }}
-      /> */}
+      />
       <AppBar position="absolute" color="default" className={classes.appBar}>
         <Toolbar>
           <Typography variant="h6" color="inherit" noWrap>

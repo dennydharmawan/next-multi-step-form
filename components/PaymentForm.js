@@ -122,7 +122,13 @@ export default function PaymentForm() {
           <Grid item xs={12}>
             <FormControlLabel
               defaultValue={false}
-              control={<Checkbox color="primary" />}
+              control={
+                <Checkbox
+                  color="primary"
+                  checked={checked}
+                  onChange={() => setChecked(!checked)}
+                />
+              }
               label="Remember credit card details for next time"
               name="saveCard"
               inputRef={register({ required: 'This is required' })}

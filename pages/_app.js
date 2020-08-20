@@ -23,13 +23,13 @@ export default function MyApp(props) {
       {/* <GoogleFonts href="https://fonts.googleapis.com/css2?family=Inter:wght@300,400;500;700&display=swap" /> */}
       <DefaultSeo
         titleTemplate={'%s | Denny Incorporation'}
-        // description="Checkout with multi step form"
-        // openGraph={{
-        //   type: 'website',
-        //   locale: 'en_IE',
-        //   url: 'https://denny-creates-a-multi-step-form.vercel.app/',
-        //   site_name: 'Denny Incorporation',
-        // }}
+        description="Checkout with multi step form"
+        openGraph={{
+          type: 'website',
+          locale: 'en_IE',
+          url: 'https://denny-creates-a-multi-step-form.vercel.app/',
+          site_name: 'Denny Incorporation',
+        }}
         // twitter={{
         //   handle: ‘@handle’,
         //   site: ‘@site’,
