@@ -9,11 +9,12 @@ import Step from '@material-ui/core/Step';
 import StepLabel from '@material-ui/core/StepLabel';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
+import { useForm } from 'react-hook-form';
 
 import AddressForm from '../components/AddressForm';
 import PaymentForm from '../components/PaymentForm';
 import Review from '../components/ReviewForm';
-import { useForm } from 'react-hook-form';
+import useCheckoutStore from '../hooks/zustand/useCheckoutStore';
 
 const useStyles = makeStyles((theme) => ({
   appBar: {
@@ -69,8 +70,10 @@ function getStepContent(step) {
 
 export default function Checkout() {
   const classes = useStyles();
-  const [activeStep, setActiveStep] = React.useState(0);
   const { shipping, handleSubmit } = useForm();
+
+  const activeStep = useCheckoutStore((state) => state.activeStep);
+  const setActiveStep = useCheckoutStore((state) => state.setActiveStep);
 
   const handleNext = () => {
     setActiveStep(activeStep + 1);
@@ -115,24 +118,7 @@ export default function Checkout() {
                 </Typography>
               </React.Fragment>
             ) : (
-              <React.Fragment>
-                {getStepContent(activeStep)}
-                <div className={classes.buttons}>
-                  {activeStep !== 0 && (
-                    <Button onClick={handleBack} className={classes.button}>
-                      Back
-                    </Button>
-                  )}
-                  <Button
-                    variant="contained"
-                    color="primary"
-                    onClick={handleNext}
-                    className={classes.button}
-                  >
-                    {activeStep === steps.length - 1 ? 'Place order' : 'Next'}
-                  </Button>
-                </div>
-              </React.Fragment>
+              <React.Fragment>{getStepContent(activeStep)}</React.Fragment>
             )}
           </React.Fragment>
         </Paper>
